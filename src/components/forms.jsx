@@ -13,15 +13,15 @@ class FormExample extends React.Component {
     registrationSuccess: false
   };
 
-  handleFirstNameChange = (event) => {
+  handleFirst= (event) => {
     this.setState({ firstName: event.target.value });
   };
 
-  handleLastNameChange = (event) => {
+  handleLast = (event) => {
     this.setState({ lastName: event.target.value });
   };
 
-  handleEmailChange = (event) => {
+  handleEmail = (event) => {
     const email = event.target.value;
     const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (emailRegex.test(email)) {
@@ -31,7 +31,7 @@ class FormExample extends React.Component {
     }
   };
 
-  handleContactsChange = (event) => {
+  handleContact = (event) => {
     this.setState({ contacts: event.target.value });
   };
 
@@ -87,7 +87,7 @@ class FormExample extends React.Component {
             type="text"
             id="firstName"
             value={this.state.firstName}
-            onChange={this.handleFirstNameChange}
+            onChange={this.handleFirst}
           />
           {this.state.firstNameError && <p>{this.state.firstNameError}</p>}
           <br />
@@ -96,7 +96,7 @@ class FormExample extends React.Component {
             type="text"
             id="lastName"
             value={this.state.lastName}
-            onChange={this.handleLastNameChange}
+            onChange={this.handleLast}
           />
           {this.state.lastNameError && <p>{this.state.lastNameError}</p>}
           <br />
@@ -105,7 +105,7 @@ class FormExample extends React.Component {
             type="text"
             id="email"
             value={this.state.email}
-            onChange={this.handleEmailChange}
+            onChange={this.handleEmail}
           />
           {this.state.emailError && <p>{this.state.emailError}</p>}
           <br />
@@ -114,7 +114,7 @@ class FormExample extends React.Component {
             type="text"
             id="contacts"
             value={this.state.contacts}
-            onChange={this.handleContactsChange}
+            onChange={this.handleContact}
           />
           {this.state.contactsError && <p>{this.state.contactsError}</p>}
           <br />
